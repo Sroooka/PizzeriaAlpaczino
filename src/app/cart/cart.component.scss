@@ -31,10 +31,10 @@ h3{
   vertical-align: middle;
   display: inline-block;
   font-family: Pacifico, serif;
-  padding: 1vh;
+  text-decoration: none;
   font-weight: lighter;
   display: inline;
-  font-size: 3vh;
+  font-size: 2vh;
 }
 
 .menu-button {
@@ -56,3 +56,18 @@ h3{
   }
 }
 
+.minus-button {
+  border-radius: 15px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  color: #ff0078;
+  width: 2vw;
+  font-family: 'Kanit', sans-serif;
+  font-weight: lighter;
+  font-size: 3vh;
+  transition: 0.4s all;
+
+  &:hover{
+    text-shadow: 0px 0px 5px #ff0004;
+  }
+}

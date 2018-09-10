@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Menu} from '../Model/Menu.Model';
 import {Subscription} from 'rxjs';
 import {MenuService} from '../menu.service';
+import {CartService} from '../cart.service';
 
 @Component({
   selector: 'app-menu',
@@ -15,6 +16,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   constructor(
     readonly menuService: MenuService,
+    readonly cartService: CartService,
   ) { }
 
   getMenu(): void {
@@ -36,6 +38,11 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.sub = this.menuService.getDrink()
       .subscribe(drink => this.menu = drink);
   }
+
+  addToCart(dish: Menu) {
+    this.cartService.addToCart(dish);
+  }
+
 
   ngOnInit() {
     this.getPizza();

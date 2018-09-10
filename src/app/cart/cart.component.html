@@ -1,8 +1,15 @@
 
-<div style="margin-top: 15px; margin-left: 10px;">
+<div style="margin-top: 15px; margin-left: 5px;">
   <h1>Koszyk:</h1>
+
+    <div *ngFor="let dish of cartService.getCart()">
+      <button class="minus-button" (click)="cartService.removeFromCart(dish)">-</button>
+      <h3>{{dish.name}} {{dish.price | number: '1.2-2'}}zł</h3>
+
+    </div>
+
   <div>
-    <h2>Suma: xxx zł</h2>
+    <h2>Suma: {{cartService.getTotal() | number: '1.2-2'}} zł</h2>
   </div>
 
   <button class="menu-button" (click)="proceed()">Zamówienie</button>
