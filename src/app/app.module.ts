@@ -4,13 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { PizzaComponent } from './pizza/pizza.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PizzaComponent
+    MenuComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,44 +1,244 @@
 {
-  "dishes": [
+  "Menu": [
     {
       "id": 1,
       "name": "Pizza Margherita",
       "isAvailable": true,
       "description": "Sos, ser",
       "type": "pizza",
-      "price": "22"
+      "price": "17"
     },
     {
       "id": 2,
+      "name": "Pizza Pescatpre",
+      "isAvailable": true,
+      "description": "Sos, ser, tuńczyk",
+      "type": "pizza",
+      "price": "18"
+    },
+    {
+      "id": 3,
+      "name": "Pizza Vesuvio",
+      "isAvailable": true,
+      "description": "Sos, ser, szynka",
+      "type": "pizza",
+      "price": "18"
+    },
+    {
+      "id": 4,
       "name": "Pizza Funghi",
       "isAvailable": true,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
-      "price": "23.50"
-    },
-    {
-      "id": 3,
-      "name": "Kebeb w bułce",
-      "isAvailable": true,
-      "description": "Chrupiąca bułka z dodatkiem kebabu drobiowego, kapusty pekińskiej, pomidora, ogórka zielonego",
-      "type": "fastfood",
-      "price": "13.90"
-    },
-    {
-      "id": 4,
-      "name": "Spagetti Bolognese",
-      "isAvailable": false,
-      "description": "Sos boloński",
-      "type": "spagetti",
-      "price": "14"
+      "price": "18"
     },
     {
       "id": 5,
-      "name": "Spagetti Siciliana",
+      "name": "Pizza Campagnola",
       "isAvailable": true,
-      "description": "Sos boloński z szynką i kukurydzą",
-      "type": "spagetti",
-      "price": "17.50"
+      "description": "Sos, ser, salami, cebula",
+      "type": "pizza",
+      "price": "18.5"
+    },
+    {
+      "id": 6,
+      "name": "Pizza Cacciatore",
+      "isAvailable": true,
+      "description": "Sos, ser, salami, oliwki",
+      "type": "pizza",
+      "price": "18.5"
+    },
+    {
+      "id": 7,
+      "name": "Pizza Bussola",
+      "isAvailable": true,
+      "description": "Sos, ser, szynka, krewetki",
+      "type": "pizza",
+      "price": "19"
+    },
+    {
+      "id": 8,
+      "name": "Pizza Bolognesa",
+      "isAvailable": true,
+      "description": "Sos, ser, szynka, salami, papryka, oliwki",
+      "type": "pizza",
+      "price": "20"
+    },
+    {
+      "id": 9,
+      "name": "Pizza Frutti Di Mare",
+      "isAvailable": true,
+      "description": "Sos, ser, tuńczyk, małże, krewetki, anchois",
+      "type": "pizza",
+      "price": "20"
+    },
+    {
+      "id": 10,
+      "name": "Pizza Mafioso",
+      "isAvailable": true,
+      "description": "Sos, ser, salami, papryka jalapeno, czosnek, tabasco",
+      "type": "pizza",
+      "price": "20"
+    },
+    {
+      "id": 11,
+      "name": "Pizza Verona",
+      "isAvailable": true,
+      "description": "Sos, ser, wędzonka, oliwki, pomidor, czosnek, tabasco",
+      "type": "pizza",
+      "price": "20"
+    },
+    {
+      "id": 12,
+      "name": "Pizza Tropicana",
+      "isAvailable": true,
+      "description": "Sos, ser, salami, pieczarki, cebula, małże, czosnek",
+      "type": "pizza",
+      "price": "20.5"
+    },
+    {
+      "id": 13,
+      "name": "Pizza Cztery Sery",
+      "isAvailable": true,
+      "description": "Sos, ser gouda, camembert, parmezan, mozarella",
+      "type": "pizza",
+      "price": "21"
+    },
+    {
+      "id": 14,
+      "name": "Pizza Rzeźnicka",
+      "isAvailable": true,
+      "description": "Sos, ser, salami, wędzonka, pieczarki, cebula, kiełbasa, kabanos, szynka",
+      "type": "pizza",
+      "price": "22"
+    },
+    {
+      "id": 15,
+      "name": "Pizza Wiejska",
+      "isAvailable": true,
+      "description": "Sos, ser, kiełbasa wędzona, cebula, pomidor, szynka, kabanos",
+      "type": "pizza",
+      "price": "23"
+    },
+    {
+      "id": 16,
+      "name": "Spaghetti Bolognese",
+      "isAvailable": true,
+      "description": "Spaghetti z sosem bolońskim, suszonymi pomidorami, bazylią",
+      "type": "pasta",
+      "price": "11"
+    },
+    {
+      "id": 17,
+      "name": "Spaghetti Bolognese Zapieczone Serem",
+      "isAvailable": true,
+      "description": "Spaghetti z sosem bolońskim, suszonymi pomidorami, bazylią zapieczone serem",
+      "type": "pasta",
+      "price": "12"
+    },
+    {
+      "id": 18,
+      "name": "Penne z Kurczakiem w Sosie Pesto Pomidorowym",
+      "isAvailable": true,
+      "description": "Penne w sosie z kurczakiem, suszonymi pomidorami, śmietaną oraz cebulą",
+      "type": "pasta",
+      "price": "12.5"
+    },
+    {
+      "id": 19,
+      "name": "Spaghetti Con Piselli",
+      "isAvailable": true,
+      "description": "Spaghetti z sosem bolońskim, suszonymi pomidorami, bazylią, groszkiem",
+      "type": "pasta",
+      "price": "12.5"
+    },
+    {
+      "id": 20,
+      "name": "Lasagne",
+      "isAvailable": true,
+      "description": "Lasagne z farszem mięsnym zapieczone serem",
+      "type": "pasta",
+      "price": "15"
+    },
+    {
+      "id": 21,
+      "name": "Coca Cola",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "5"
+    },
+    {
+      "id": 22,
+      "name": "Coca Cola Zero",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "5"
+    },
+    {
+      "id": 23,
+      "name": "Coca Cola Light",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "5"
+    },
+    {
+      "id": 24,
+      "name": "Fanta",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "5"
+    },
+    {
+      "id": 25,
+      "name": "Sprite",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "5"
+    },
+    {
+      "id": 26,
+      "name": "Tonik Kinley",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "5"
+    },
+    {
+      "id": 27,
+      "name": "Woda Gazowana Cisowianka",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "3"
+    },
+    {
+      "id": 28,
+      "name": "Woda Niegazowana Cisowianka",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "3"
+    },
+    {
+      "id": 29,
+      "name": "Nestea Cytrynowa",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "5"
+    },
+    {
+      "id": 30,
+      "name": "Nestea Brzoskwiniowa",
+      "isAvailable": true,
+      "description": "0.5l",
+      "type": "drink",
+      "price": "5"
     }
   ],
   "orders": [
