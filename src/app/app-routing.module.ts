@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {MenuComponent} from './menu/menu.component';
 import {MenuDetailComponent} from './menu-detail/menu-detail.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/menu', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   // { path: '', redirectTo: 'project-list', pathMatch: 'full' },
   { path: 'menu', component: MenuComponent },
   { path: 'detail/:id', component: MenuDetailComponent },
-  // { path: 'heroes', component: HeroesComponent }
+  { path: 'home', component: HomeComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

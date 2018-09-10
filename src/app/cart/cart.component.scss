@@ -1,0 +1,58 @@
+h1{
+  display: block;
+  color: #272727;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: Pacifico, serif;
+  padding: 1vh;
+  font-weight: lighter;
+  display: inline;
+  font-size: 5vh;
+}
+
+h2{
+  display: block;
+  color: #272727;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: Pacifico, serif;
+  padding: 1vh;
+  font-weight: lighter;
+  display: inline;
+  font-size: 4vh;
+}
+
+h3{
+  display: block;
+  color: #272727;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: Pacifico, serif;
+  padding: 1vh;
+  font-weight: lighter;
+  display: inline;
+  font-size: 3vh;
+}
+
+.menu-button {
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  border: 0;
+  background: #e27eff;
+  color: #4d0070;
+  text-transform: uppercase;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: 5px;
+  font-weight: lighter;
+  font-size: 3vh;
+  transition: 0.4s all;
+
+  &:hover{
+    box-shadow: 0px 0px 15px #4a004e;
+  }
+}
+

@@ -17,7 +17,6 @@ export class MenuComponent implements OnInit, OnDestroy {
     readonly menuService: MenuService,
   ) { }
 
-
   getMenu(): void {
     this.sub = this.menuService.getMenu()
       .subscribe(menu => this.menu = menu);
