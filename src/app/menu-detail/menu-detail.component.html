@@ -1,0 +1,8 @@
+<button class="menu-button" (click)="goBack()">Back to menu</button>
+
+<div *ngIf="dish">
+  <h1>{{dish.name}} Details</h1>
+  <div><span>id: </span>{{dish.id}}</div>
+
+  <button (click)="goBack()">go back</button>
+</div>

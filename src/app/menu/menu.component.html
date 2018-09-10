@@ -5,10 +5,9 @@
     <button class="menu-button" (click)="getDrink()">Napoje</button>
   </div>
 
-
   <div class="container" *ngFor="let m of menu">
     <ul routerLinkActive="active" >
-      <li class="left-container"><a class="dishcontainer">{{m.name}}</a></li>
+      <li class="left-container"><a class="dishcontainer" routerLink="/detail/{{m.id}}">{{m.name}}</a></li>
       <li class="right-container"><a class="dishcontainer">{{m.price | number: '1.2-2'}}zł</a></li>
     </ul>
 

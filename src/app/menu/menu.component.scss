@@ -34,7 +34,9 @@ ul {
   text-decoration: none;
   font-family: Lobster;
   letter-spacing: 2px;
-  text-shadow: 0px 0px 15px #f700ff;
+  &:hover{
+    text-shadow: 2px 2px 15px #ff1600;
+  }
 }
 
 .descriptioncontainer {
