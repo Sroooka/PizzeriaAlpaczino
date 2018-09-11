@@ -2,9 +2,9 @@
 <div *ngIf="dish">
   <h1>{{dish.name}} Details</h1>
   <br>
-  <h2>Składniki: </h2><h3>{{dish.description}}</h3>
+  <h3>{{dish.description}}</h3>
   <br>
   <h2>Cena: {{dish.price | number: '1.2-2'}}zł</h2>
 </div>
 
-<button class="menu-button" (click)="goBack()">Back to menu</button>
+<button class="menu-button" (click)="goBack()">Powrót</button>

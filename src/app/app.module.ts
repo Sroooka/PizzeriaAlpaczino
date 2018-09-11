@@ -9,6 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MenuDetailComponent } from './menu-detail/menu-detail.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CartComponent } from './cart/cart.component';
     MenuComponent,
     MenuDetailComponent,
     HomeComponent,
-    CartComponent
+    CartComponent,
+    OrderComponent
   ],
   imports: [
     HttpClientModule,
