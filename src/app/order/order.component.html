@@ -1,7 +1,45 @@
+<form [formGroup]="orderForm" style="margin-top: 20px;">
+  <table class="table">
+    <tr>
+      <th><h2>Imię:</h2></th>
+      <th><input class="formcontrol" formControlName="name" placeholder="Jan"></th>
+    </tr>
+    <tr>
+      <th><h2>Nazwisko:</h2></th>
+      <th><input class="formcontrol" formControlName="surname" placeholder="Kowalski"></th>
+    </tr>
+    <tr>
+      <th><h2>Adres:</h2></th>
+      <th><input class="formcontrol" formControlName="address" placeholder="ul. Przykładowa 1"></th>
+    </tr>
+    <tr>
+      <th><h2>Miasto:</h2></th>
+      <th><input class="formcontrol" formControlName="city" placeholder="Środa Wielkopolska"></th>
+    </tr>
+    <tr>
+      <th><h2>Kod pocztowy:</h2></th>
+      <th><input class="formcontrol" formControlName="postalCode" placeholder="63-000"></th>
+    </tr>
+    <tr>
+      <th><h2>Telefon:</h2></th>
+      <th><input class="formcontrol" formControlName="telephone" placeholder="555-555-555"></th>
+    </tr>
+  </table>
+  <div>
+    <button id="backButton" class="menu-button" (click)="goBack()">Powrót</button>
+    <button id="nextButton" class="menu-button" type="submit" (click)="onFormSubmit()">Potwierdź</button>
+  </div>
+</form>
 
-<div>
-  <h1>{{total}} zł</h1>
+<div style="margin-top: 20px; margin-left: 20px;">
+  <h2>Kwota zamówienia: </h2><h1>{{orderService.getTotal() | number: '1.2-2'}} zł</h1>
+  <div>
+    <h2>Lista zakupów:</h2>
+    <div *ngFor="let dish of orderService.getCart()" style="margin-left: 10px;">
+      <h3>{{dish.name}} {{dish.price | number: '1.2-2'}}zł</h3>
+    </div>
+  </div>
+
 
 </div>
 
-<button class="menu-button" (click)="goBack()">Powrót</button>

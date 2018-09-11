@@ -43,7 +43,6 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.cartService.addToCart(dish);
   }
 
-
   ngOnInit() {
     this.getPizza();
   }

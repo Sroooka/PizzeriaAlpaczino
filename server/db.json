@@ -241,10 +241,17 @@
       "price": "5"
     }
   ],
-  "orders": [
+  "Orders": [
     {
       "id": 1,
-      "dishIds": [1, 5]
+      "name": "Kowalski:",
+      "surname": "Kowalski",
+      "address": "ul. Przykladowa 1",
+      "city": "Sroda Wielkopolska",
+      "postalCode": "63-000",
+      "telephone": "555-555-555",
+      "dishIds": [1, 2, 3, 4, 5, 6],
+      "price": 108
     }
   ],
   "users": [

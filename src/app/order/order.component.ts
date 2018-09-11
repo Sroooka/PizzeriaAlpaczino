@@ -4,6 +4,8 @@ import {Location} from '@angular/common';
 import {CartService} from '../cart.service';
 import {OrderService} from '../order.service';
 import {Menu} from '../Model/Menu.Model';
+import {FormControl, FormGroup} from '@angular/forms';
+
 
 @Component({
   selector: 'app-order',
@@ -12,15 +14,30 @@ import {Menu} from '../Model/Menu.Model';
 })
 export class OrderComponent implements OnInit {
 
+  orderForm = new FormGroup({
+    name: new FormControl(),
+    surname: new FormControl(),
+    address: new FormControl(),
+    city: new FormControl(),
+    postalCode: new FormControl(),
+    telephone: new FormControl(),
+  });
+
   cart: Menu[] = [];
   total = 0;
 
   constructor(
-    private orderService: OrderService,
+    public orderService: OrderService,
     private cartService: CartService,
     private route: ActivatedRoute,
     private location: Location,
   ) { }
+
+  onFormSubmit(): void {
+    console.log(this.orderForm.get('name').value);
+    this.orderService.generateNewOrder(this.orderForm);
+    this.cartService.clearCart();
+  }
 
   ngOnInit() {
     this.getCart();

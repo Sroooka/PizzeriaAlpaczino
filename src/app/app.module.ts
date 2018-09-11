@@ -10,6 +10,7 @@ import { MenuDetailComponent } from './menu-detail/menu-detail.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { OrderComponent } from './order/order.component';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

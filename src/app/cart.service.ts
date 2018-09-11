@@ -51,4 +51,9 @@ export class CartService {
       this.router.navigate(['/order']);
     }
   }
+
+  clearCart() {
+    this.cart = [];
+    this.total = 0;
+  }
 }
