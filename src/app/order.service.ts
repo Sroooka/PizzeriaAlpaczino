@@ -16,6 +16,7 @@ export class OrderService {
   order: Order;
   orders: Order[] = [];
   sub: Subscription;
+  dishIds = [];
 
   setCart(newCart: Menu[]) {
     this.cart = newCart;
@@ -40,8 +41,11 @@ export class OrderService {
   generateNewOrder(orderForm: FormGroup) {
     this.sub = this.http.get<Order[]>('/api/Orders')
       .subscribe(list => this.orders = list);
-    console.log(this.orders.length);
-    console.log(this.orders[0].telephone);
+
+    this.cart.forEach((item) => {
+      this.dishIds.push(item.id);
+      console.log(item.id);
+    });
 
     this.order = {
       id: this.orders.length + 1,
@@ -51,7 +55,7 @@ export class OrderService {
       city: orderForm.get('city').value,
       postalCode: orderForm.get('postalCode').value,
       telephone: orderForm.get('telephone').value,
-      dishIds: [],
+      dishIds: this.dishIds,
       price: this.total,
     };
   }
