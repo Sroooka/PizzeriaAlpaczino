@@ -5,6 +5,7 @@ import {MenuDetailComponent} from './menu-detail/menu-detail.component';
 import {HomeComponent} from './home/home.component';
 import {OrderComponent} from './order/order.component';
 import {OrderDoneComponent} from './order-done/order-done.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'order', component: OrderComponent },
   { path: 'detail/:id', component: MenuDetailComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'orderdone', component: OrderDoneComponent }
+  { path: 'orderdone', component: OrderDoneComponent },
+  { path: 'login', component: LoginComponent }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

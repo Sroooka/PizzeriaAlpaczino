@@ -4,7 +4,7 @@ import {Location} from '@angular/common';
 import {CartService} from '../cart.service';
 import {OrderService} from '../order.service';
 import {Menu} from '../Model/Menu.Model';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 
 @Component({
@@ -15,12 +15,12 @@ import {FormControl, FormGroup} from '@angular/forms';
 export class OrderComponent implements OnInit {
 
   orderForm = new FormGroup({
-    name: new FormControl(),
-    surname: new FormControl(),
-    address: new FormControl(),
-    city: new FormControl(),
-    postalCode: new FormControl(),
-    telephone: new FormControl(),
+    name: new FormControl('', Validators.required),
+    surname: new FormControl('', Validators.required),
+    address: new FormControl('', Validators.required),
+    city: new FormControl('', Validators.required),
+    postalCode: new FormControl('', Validators.required),
+    telephone: new FormControl('', Validators.required),
   });
 
   cart: Menu[] = [];
