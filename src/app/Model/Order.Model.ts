@@ -1,6 +1,7 @@
+import {OrderStatus} from './OrderStatus.Enum';
 
 export interface Order {
-  id: number;
+  // id: number;
   name: string;
   surname: string;
   address: string;
@@ -9,4 +10,5 @@ export interface Order {
   telephone: string;
   dishIds: number[];
   price: number;
+  status: OrderStatus
 }

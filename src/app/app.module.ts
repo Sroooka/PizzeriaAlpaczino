@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OrderDoneComponent } from './order-done/order-done.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MenuDetailComponent,
     HomeComponent,
     CartComponent,
-    OrderComponent
+    OrderComponent,
+    OrderDoneComponent
   ],
   imports: [
     HttpClientModule,
@@ -30,6 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
