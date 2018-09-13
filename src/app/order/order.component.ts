@@ -3,7 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
 import {CartService} from '../cart.service';
 import {OrderService} from '../order.service';
-import {Menu} from '../Model/Menu.Model';
+import {MenuEntry} from '../Model/MenuEntry.Model';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 
@@ -23,7 +23,7 @@ export class OrderComponent implements OnInit {
     telephone: new FormControl('', Validators.required),
   });
 
-  cart: Menu[] = [];
+  cart: MenuEntry[] = [];
   total = 0;
 
   constructor(

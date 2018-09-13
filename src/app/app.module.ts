@@ -13,6 +13,8 @@ import { OrderComponent } from './order/order.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OrderDoneComponent } from './order-done/order-done.component';
 import { LoginComponent } from './login/login.component';
+import { LoginGuard } from './login.guard';
+import { OrdersComponent } from './orders/orders.component';
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { LoginComponent } from './login/login.component';
     CartComponent,
     OrderComponent,
     OrderDoneComponent,
-    LoginComponent
+    LoginComponent,
+    OrdersComponent
   ],
   imports: [
     HttpClientModule,

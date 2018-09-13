@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Menu} from '../Model/Menu.Model';
+import {MenuEntry} from '../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
 import {MenuService} from '../menu.service';
 import {CartService} from '../cart.service';
@@ -11,7 +11,7 @@ import {CartService} from '../cart.service';
 })
 
 export class MenuComponent implements OnInit, OnDestroy {
-  menu: Menu[];
+  menu: MenuEntry[];
   sub: Subscription;
 
   constructor(
@@ -39,7 +39,7 @@ export class MenuComponent implements OnInit, OnDestroy {
       .subscribe(drink => this.menu = drink);
   }
 
-  addToCart(dish: Menu) {
+  addToCart(dish: MenuEntry) {
     this.cartService.addToCart(dish);
   }
 

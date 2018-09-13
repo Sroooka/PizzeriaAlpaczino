@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Menu} from './Model/Menu.Model';
+import {MenuEntry} from './Model/MenuEntry.Model';
 import {OrderService} from './order.service';
 import {Router} from '@angular/router';
 
@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class CartService {
 
-  cart: Menu[] = [];
+  cart: MenuEntry[] = [];
   total = 0;
 
   constructor(
@@ -18,7 +18,7 @@ export class CartService {
   ) {
   }
 
-  addToCart(dish: Menu) {
+  addToCart(dish: MenuEntry) {
     this.cart.push(dish);
     this.total += parseFloat(String(dish.price));
     this.cart.sort(function (obj1, obj2) {
@@ -26,7 +26,7 @@ export class CartService {
     });
   }
 
-  removeFromCart(dish: Menu) {
+  removeFromCart(dish: MenuEntry) {
     for (let i = 0; i < this.cart.length; i++){
       if (this.cart[i] === dish) {
         this.cart.splice(i, 1);

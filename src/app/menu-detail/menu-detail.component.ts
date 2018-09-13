@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Menu} from '../Model/Menu.Model';
+import {MenuEntry} from '../Model/MenuEntry.Model';
 import {MenuService} from '../menu.service';
 import { Location } from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
@@ -11,7 +11,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class MenuDetailComponent implements OnInit {
 
-  @Input() dish: Menu;
+  @Input() dish: MenuEntry;
 
   constructor(
     private menuService: MenuService,

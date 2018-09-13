@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Menu} from '../Model/Menu.Model';
+import {MenuEntry} from '../Model/MenuEntry.Model';
 import {CartService} from '../cart.service';
 
 @Component({

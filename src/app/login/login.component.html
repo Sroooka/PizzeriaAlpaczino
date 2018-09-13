@@ -1,3 +1,16 @@
-<p>
-  login works!
-</p>
+<form [formGroup]="loginForm" style="margin-top: 20px;">
+  <table class="table">
+    <tr>
+      <th><h2>Nazwa użytkownika:</h2></th>
+      <th><input class="formcontrol" formControlName="login"></th>
+    </tr>
+    <tr>
+      <th><h2>Hasło:</h2></th>
+      <th><input class="formcontrol" type="password" formControlName="password"></th>
+    </tr>
+  </table>
+  <div>
+    <button id="backButton" class="menu-button" (click)="goBack()">Powrót</button>
+    <button id="nextButton" class="menu-button" type="button" (click)="validateLogin()">Zaloguj</button>
+  </div>
+</form>

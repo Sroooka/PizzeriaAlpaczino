@@ -1,0 +1,85 @@
+*{
+  background-color: #70009a;
+  margin: 10px;
+}
+
+table.purpleHorizon {
+  margin-top: 10px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  border: 3px solid #c90085;
+  background-color: #555555;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.purpleHorizon td, table.purpleHorizon th {
+  padding: 5px;
+  border: 2px solid #c90085;
+}
+table.purpleHorizon tbody td {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+table.purpleHorizon tr:nth-child(even) {
+  background: #CC3BFC;
+}
+table.purpleHorizon thead {
+  background: #792396;
+  border-bottom: 3px solid #c90085;
+}
+table.purpleHorizon thead th {
+  font-size: 16px;
+  color: #FFFFFF;
+  text-align: left;
+  border-left: 3px solid #c90085;
+}
+table.purpleHorizon thead th:first-child {
+  border-left: none;
+}
+
+table.purpleHorizon tfoot td {
+  font-size: 13px;
+}
+table.purpleHorizon tfoot .links {
+  text-align: right;
+}
+table.purpleHorizon tfoot .links a{
+  display: inline-block;
+  background: #792396;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+h1{
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  display: inline;
+  font-size: 4vh;
+}
+
+h2{
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  display: inline;
+  font-size: 3vh;
+}
+
+h3{
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  text-decoration: none;
+  display: inline;
+  font-size: 2vh;
+}

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Menu} from './Model/Menu.Model';
+import {MenuEntry} from './Model/MenuEntry.Model';
 import {FormGroup} from '@angular/forms';
 import {Order} from './Model/Order.Model';
 import {CartService} from './cart.service';
@@ -14,14 +14,14 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class OrderService {
-  cart: Menu[] = [];
+  cart: MenuEntry[] = [];
   total = 0;
   order: Order;
   orders: Order[] = [];
   sub: Subscription;
   dishIds = [];
 
-  setCart(newCart: Menu[]) {
+  setCart(newCart: MenuEntry[]) {
     this.cart = newCart;
   }
 
@@ -54,7 +54,7 @@ export class OrderService {
     });
 
     this.order = {
-      // id: this.orders.length + 1,
+      id: null,
       name: orderForm.get('name').value,
       surname: orderForm.get('surname').value,
       address: orderForm.get('address').value,
@@ -78,7 +78,7 @@ export class OrderService {
   postOrder(order: Order): Observable<Order> {
     return this.http.post<Order>('/api/Orders',
       {
-        // 'id': this.orders.length + 1,
+        'id': null,
         'name': order.name,
         'surname': order.surname,
         'address': order.address,
@@ -91,6 +91,5 @@ export class OrderService {
       }
     );
   }
-
 }
 

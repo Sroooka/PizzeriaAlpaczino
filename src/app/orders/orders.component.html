@@ -1,0 +1,42 @@
+<div class="container" *ngFor="let o of orders">
+  <div style="padding: 10px;">
+    <div><h1>Zamówienie numer {{o.id}}</h1></div>
+    <div><h2>Status zamówienia: {{o.status}}</h2></div>
+
+    <table class="purpleHorizon">
+      <thead>
+      <tr>
+        <th>Imię i nazwisko</th>
+        <th>Adres</th>
+        <th>Miasto</th>
+        <th>Telefon kontaktowy</th>
+        <th>Kwota zamówienia</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{o.name}} {{o.surname}}</td>
+        <td>{{o.address}}</td>
+        <td>{{o.postalCode}} {{o.city}}</td>
+        <td>{{o.telephone}}</td>
+        <td>{{o.price | number: '1.2-2'}} zł</td>
+      </tr>
+      </tbody>
+    </table>
+    <div><h2>Szczegóły zamówienia:</h2></div>
+    <table class="purpleHorizon">
+      <thead>
+      <tr>
+        <th>Produkt</th>
+        <th>Cena</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of getProductListByOrderId(o.id)">
+        <td>{{p.name}}</td>
+        <td>{{p.price | number: '1.2-2'}} zł</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
