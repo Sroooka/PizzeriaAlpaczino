@@ -1,7 +1,7 @@
 export enum OrderStatus {
   NEW = 'Przyjęto do realizacji',
   IN_PROGRESS = 'W trakcie realizacji',
-  SENT = 'Wysłane',
+  SENT = 'Wysłano',
   DELIVERED = 'Dostarczono',
   CANCELED = 'Anulowano',
 }

@@ -8,12 +8,14 @@ import {OrderDoneComponent} from './order-done/order-done.component';
 import {LoginComponent} from './login/login.component';
 import {OrdersComponent} from './orders/orders.component';
 import {LoginGuard} from './login.guard';
+import {OrderDetailsComponent} from './order-details/order-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'menu', component: MenuComponent },
   { path: 'order', component: OrderComponent },
   { path: 'detail/:id', component: MenuDetailComponent },
+  { path: 'order-detail/:id', component: OrderDetailsComponent, canActivate: [LoginGuard] },
   { path: 'home', component: HomeComponent },
   { path: 'orderdone', component: OrderDoneComponent },
   { path: 'login', component: LoginComponent },

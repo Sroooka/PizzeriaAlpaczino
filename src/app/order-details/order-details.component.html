@@ -1,0 +1,66 @@
+<div class="container">
+  <div style="padding: 10px;">
+    <a class="ordercontainer" routerLink="/order-detail/{{order?.id}}">Zamówienie numer {{order?.id}}</a>
+    <div><h2>Status zamówienia: {{order?.status}}</h2></div>
+
+    <table class="purpleHorizon">
+      <thead>
+      <tr>
+        <th>Imię i nazwisko</th>
+        <th>Adres</th>
+        <th>Miasto</th>
+        <th>Telefon kontaktowy</th>
+        <th>Kwota zamówienia</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{order?.name}} {{order?.surname}}</td>
+        <td>{{order?.address}}</td>
+        <td>{{order?.postalCode}} {{order?.city}}</td>
+        <td>{{order?.telephone}}</td>
+        <td>{{order?.price | number: '1.2-2'}} zł</td>
+      </tr>
+      </tbody>
+    </table>
+    <div><h2>Szczegóły zamówienia:</h2></div>
+    <table class="purpleHorizon">
+      <thead>
+      <tr>
+        <th>Produkt</th>
+        <th>Cena</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of getProductList()">
+        <td>{{p.name}}</td>
+        <td>{{p.price | number: '1.2-2'}} zł</td>
+      </tr>
+      <tr>
+        <td style="background: #680088;">Suma:</td>
+        <td style="background: #680088;">{{order?.price | number: '1.2-2'}} zł</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+    <div>
+      <h2>Zmień status zamówienia </h2>
+    </div>
+    <div>
+      <h3>Aktualnie: {{order?.status}}</h3>
+    </div>
+    <div style="margin-left: 10px; margin-bottom: 20px;">
+      <button class="status-button" (click)="setStatus('NEW')">Przyjęto do realizacji</button>
+      <button class="status-button" (click)="setStatus('IN_PROGRESS')">W trakcie realizacji</button>
+      <button class="status-button" (click)="setStatus('SENT')">Wysłano</button>
+      <button class="status-button" (click)="setStatus('DELIVERED')">Dostarczono</button>
+      <button class="status-button" (click)="setStatus('CANCELED')">Anulowano</button>
+    </div>
+</div>
+
+<div style="margin-left: 10px;">
+  <button class="menu-button" (click)="goBack()">Powrót</button>
+</div>
+
