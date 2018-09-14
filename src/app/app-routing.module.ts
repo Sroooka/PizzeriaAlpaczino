@@ -12,7 +12,7 @@ import {OrderDetailsComponent} from './order-details/order-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'menu', component: MenuComponent },
+  { path: 'menuEntries', component: MenuComponent },
   { path: 'order', component: OrderComponent },
   { path: 'detail/:id', component: MenuDetailComponent },
   { path: 'order-detail/:id', component: OrderDetailsComponent, canActivate: [LoginGuard] },

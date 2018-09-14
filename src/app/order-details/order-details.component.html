@@ -44,23 +44,24 @@
     </table>
   </div>
 
-  <div>
+  <div class="editor">
     <div>
       <h2>Zmień status zamówienia </h2>
     </div>
-    <div>
-      <h3>Aktualnie: {{order?.status}}</h3>
-    </div>
     <div style="margin-left: 10px; margin-bottom: 20px;">
-      <button class="status-button" (click)="setStatus('NEW')">Przyjęto do realizacji</button>
-      <button class="status-button" (click)="setStatus('IN_PROGRESS')">W trakcie realizacji</button>
-      <button class="status-button" (click)="setStatus('SENT')">Wysłano</button>
-      <button class="status-button" (click)="setStatus('DELIVERED')">Dostarczono</button>
-      <button class="status-button" (click)="setStatus('CANCELED')">Anulowano</button>
+      <button class="status-button" (click)="setStatus(statusNew)">Przyjęto do realizacji</button>
+      <button class="status-button" (click)="setStatus(statusInProgress)">W trakcie realizacji</button>
+      <button class="status-button" (click)="setStatus(statusSent)">Wysłano</button>
+      <button class="status-button" (click)="setStatus(statusDelivered)">Dostarczono</button>
+      <button class="status-button" (click)="setStatus(statusCanceled)">Anulowano</button>
     </div>
+  </div>
+
+  <div style="margin-left: 10px;">
+    <button class="menu-button" (click)="goBack()">Powrót</button>
+  </div>
 </div>
 
-<div style="margin-left: 10px;">
-  <button class="menu-button" (click)="goBack()">Powrót</button>
-</div>
+
+
 

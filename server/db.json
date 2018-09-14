@@ -255,7 +255,7 @@
         3
       ],
       "price": 53,
-      "status": "Przyjęto do realizacji",
+      "status": "Anulowano",
       "id": 1
     },
     {
@@ -270,7 +270,7 @@
         2
       ],
       "price": 35,
-      "status": "Przyjęto do realizacji",
+      "status": "Dostarczono",
       "id": 2
     },
     {
@@ -286,7 +286,7 @@
         3
       ],
       "price": 53,
-      "status": "Przyjęto do realizacji",
+      "status": "Dostarczono",
       "id": 3
     },
     {
@@ -314,7 +314,7 @@
         3
       ],
       "price": 260,
-      "status": "Przyjęto do realizacji",
+      "status": "Wysłano",
       "id": 4
     },
     {
@@ -332,6 +332,89 @@
       ],
       "price": 15,
       "status": "Przyjęto do realizacji"
+    },
+    {
+      "id": 6,
+      "name": "Jan",
+      "surname": "Marian",
+      "address": "ul. Prosta 1",
+      "city": "Sroda WLkp",
+      "postalCode": "63-000",
+      "telephone": "555-555-555",
+      "dishIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15
+      ],
+      "price": 273,
+      "status": "W trakcie realizacji"
+    },
+    {
+      "id": 7,
+      "name": "asdf",
+      "surname": "asdf",
+      "address": "af",
+      "city": "asdf",
+      "postalCode": "asfas",
+      "telephone": "df",
+      "dishIds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        21,
+        21,
+        21
+      ],
+      "price": 225,
+      "status": "Dostarczono"
+    },
+    {
+      "id": 8,
+      "name": "adsad",
+      "surname": "asd",
+      "address": "sd",
+      "city": "dasd",
+      "postalCode": "sadas",
+      "telephone": "asd",
+      "dishIds": [
+        21
+      ],
+      "price": 5,
+      "status": "W trakcie realizacji"
     }
   ],
   "Users": [

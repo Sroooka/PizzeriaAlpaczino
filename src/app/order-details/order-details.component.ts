@@ -6,6 +6,7 @@ import {Order} from '../Model/Order.Model';
 import {MenuEntry} from '../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
 import {OrdersService} from '../orders.service';
+import {OrderStatus} from '../Model/OrderStatus.Enum';
 
 @Component({
   selector: 'app-order-details',
@@ -18,13 +19,19 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
   simpleOrderMenu: MenuEntry[];
   subOrder: Subscription;
   subMenu: Subscription;
+  statusNew = OrderStatus.NEW;
+  statusInProgress = OrderStatus.IN_PROGRESS;
+  statusSent = OrderStatus.SENT;
+  statusDelivered = OrderStatus.DELIVERED;
+  statusCanceled = OrderStatus.CANCELED;
 
   constructor(
     private menuService: MenuService,
     private route: ActivatedRoute,
     private location: Location,
     readonly ordersService: OrdersService,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.getOrder();
@@ -61,5 +68,10 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
       }
     }
     return this.simpleOrderMenu;
+  }
+
+  setStatus(status: OrderStatus) {
+    this.order.status = status;
+    this.subOrder = this.ordersService.setOrderStatus(this.order).subscribe();
   }
 }

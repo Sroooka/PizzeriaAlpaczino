@@ -4,13 +4,13 @@
 
       <img class="navi-icon" src="./assets/logo.png" routerLink="home">
       <li class="left-container"><a class="navi-link" routerLink="home">{{title}}</a></li>
-      <li class="left-container"><a class="navi-link" routerLink="menu">Lista Dań</a></li>
+      <li class="left-container"><a class="navi-link" routerLink="menuEntries">Lista Dań</a></li>
       <li *ngIf="loginService.isLogged() == true" class="left-container"><a class="navi-link" routerLink="orders">Zamówienia</a></li>
       <li *ngIf="loginService.isLogged() == false" class="right-container">
         <img id="loginIcon" src="./assets/login.png" routerLink="login">
       </li>
       <li *ngIf="loginService.isLogged() == true" class="right-container">
-        <img id="logoutIcon" src="./assets/logout.png" (click)="loginService.logout()" routerLink="home">
+        <img id="logoutIcon" src="./assets/logout.png" (click)="loginService.logout()">
       </li>
       <li *ngIf="loginService.isLogged() == true" class="right-container">
         <a class="navi-link">Witaj {{loginService.userName}}</a>
