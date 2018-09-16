@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login.guard';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { MenuSettingsComponent } from './menu-settings/menu-settings.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     OrderDoneComponent,
     LoginComponent,
     OrdersComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    MenuSettingsComponent
   ],
   imports: [
     HttpClientModule,

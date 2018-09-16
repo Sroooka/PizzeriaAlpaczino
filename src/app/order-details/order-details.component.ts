@@ -5,7 +5,7 @@ import {Location} from '@angular/common';
 import {Order} from '../Model/Order.Model';
 import {MenuEntry} from '../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
-import {OrdersService} from '../orders.service';
+import {OrderService} from '../order.service';
 import {OrderStatus} from '../Model/OrderStatus.Enum';
 
 @Component({
@@ -29,7 +29,7 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
     private menuService: MenuService,
     private route: ActivatedRoute,
     private location: Location,
-    readonly ordersService: OrdersService,
+    readonly orderService: OrderService,
   ) {
   }
 
@@ -49,7 +49,7 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
 
   getOrder(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.subOrder = this.ordersService.getOrder(id)
+    this.subOrder = this.orderService.getOrder(id)
       .subscribe(order => this.order = order);
   }
 
@@ -72,6 +72,6 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
 
   setStatus(status: OrderStatus) {
     this.order.status = status;
-    this.subOrder = this.ordersService.setOrderStatus(this.order).subscribe();
+    this.subOrder = this.orderService.setOrderStatus(this.order).subscribe();
   }
 }

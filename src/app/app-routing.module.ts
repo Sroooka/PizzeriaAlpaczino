@@ -9,10 +9,12 @@ import {LoginComponent} from './login/login.component';
 import {OrdersComponent} from './orders/orders.component';
 import {LoginGuard} from './login.guard';
 import {OrderDetailsComponent} from './order-details/order-details.component';
+import {MenuSettingsComponent} from './menu-settings/menu-settings.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'menuEntries', component: MenuComponent },
+  { path: 'menuSettings', component: MenuSettingsComponent },
   { path: 'order', component: OrderComponent },
   { path: 'detail/:id', component: MenuDetailComponent },
   { path: 'order-detail/:id', component: OrderDetailsComponent, canActivate: [LoginGuard] },

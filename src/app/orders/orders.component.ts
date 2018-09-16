@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MenuService} from '../menu.service';
-import {OrdersService} from '../orders.service';
+import {OrderService} from '../order.service';
 import {MenuEntry} from '../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
 import {Order} from '../Model/Order.Model';
@@ -18,7 +18,7 @@ export class OrdersComponent implements OnInit, OnDestroy {
   subMenu: Subscription;
 
   constructor(
-    readonly ordersService: OrdersService,
+    readonly orderService: OrderService,
     readonly menuService: MenuService,
   ) {
   }
@@ -34,7 +34,7 @@ export class OrdersComponent implements OnInit, OnDestroy {
   }
 
   getOrders(): void {
-    this.subOrder = this.ordersService.getOrders()
+    this.subOrder = this.orderService.getOrders()
       .subscribe(order => this.orders = order);
   }
 

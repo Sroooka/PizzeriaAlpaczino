@@ -15,9 +15,6 @@ export class OrderDoneComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.router.navigate(['/home']);
-    }, 5000);
   }
 
 

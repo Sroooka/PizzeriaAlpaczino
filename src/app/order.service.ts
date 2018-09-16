@@ -91,5 +91,17 @@ export class OrderService {
       }
     );
   }
+
+  getOrders(): Observable<Order[]> {
+    return this.http.get<Order[]>('/api/Orders');
+  }
+
+  getOrder(id: number): Observable<Order> {
+    return this.http.get<Order>(`/api/Orders/${id}`);
+  }
+
+  setOrderStatus(order: Order) {
+    return this.http.put<Order>(`/api/Orders/${order.id}`, order);
+  }
 }
 

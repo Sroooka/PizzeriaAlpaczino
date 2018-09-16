@@ -415,6 +415,29 @@
       ],
       "price": 5,
       "status": "W trakcie realizacji"
+    },
+    {
+      "id": 9,
+      "name": "Krzysztof",
+      "surname": "Jarzyna",
+      "address": "Ze",
+      "city": "Szczecina",
+      "postalCode": "555-555",
+      "telephone": "555-555-555",
+      "dishIds": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        17,
+        18,
+        21,
+        24,
+        30
+      ],
+      "price": 132.5,
+      "status": "Dostarczono"
     }
   ],
   "Users": [
