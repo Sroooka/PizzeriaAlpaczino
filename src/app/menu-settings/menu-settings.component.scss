@@ -1,5 +1,5 @@
 * {
-  margin: 5px;
+  margin: 10px;
 }
 
 ul {
@@ -150,4 +150,15 @@ ul {
 
 .onoffswitch-checkbox:checked + .onoffswitch-label:before {
   right: 0px;
+}
+
+h2{
+  display: block;
+  color: #ffffff;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Lobster;
+  font-weight: lighter;
+  font-size: 1.5vh;
+  text-shadow: 1px 1px 5px #ffa8ca;
 }

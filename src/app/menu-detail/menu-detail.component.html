@@ -1,10 +1,13 @@
-
-<div *ngIf="dish">
+<div *ngIf="dish" style="margin-bottom: 0;">
   <h1>{{dish.name}} Details</h1>
   <br>
   <h3>{{dish.description}}</h3>
   <br>
   <h2>Cena: {{dish.price | number: '1.2-2'}}zł</h2>
+
+</div>
+<div style="margin-top: 0;">
+  <button style="margin-top: 20px;" class="menu-button" (click)="goBack()">Powrót</button>
 </div>
 
-<button class="menu-button" (click)="goBack()">Powrót</button>
+

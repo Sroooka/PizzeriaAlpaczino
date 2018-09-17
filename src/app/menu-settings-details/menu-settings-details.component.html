@@ -1,37 +1,36 @@
-<div style="margin: 20px;">
-  <div *ngIf="dish">
-    <h1>Szczegóły: {{dish.name}}</h1>
-    <br>
-    <h3>{{dish.description}}</h3>
-    <br>
-    <h2>Cena: {{dish.price | number: '1.2-2'}}zł</h2>
+<div class="container">
+  <div style="margin: 20px;">
+    <div *ngIf="dish">
+      <h1>Szczegóły: {{dish.name}}</h1>
+      <br>
+      <h3>{{dish.description}}</h3>
+      <br>
+      <h2>Cena: {{dish.price | number: '1.2-2'}}zł</h2>
+    </div>
+
+    <table>
+      <tr>
+        <th><h1>Dostępność</h1></th>
+        <th style="alignment: center">
+          <form class="formgroup" [formGroup]="form">
+            <div class="onoffswitch">
+
+              <input [checked]="dish?.isAvailable"
+                     type="checkbox"
+                     name="onoffswitch"
+                     class="onoffswitch-checkbox"
+                     id="myonoffswitch"
+                     formControlName="avaliability" (change)="changeAvaliability()">
+              <label class="onoffswitch-label" for="myonoffswitch"></label>
+            </div>
+          </form>
+        </th>
+      </tr>
+    </table>
+
+    <button style="margin-top: 30px;" class="menu-button" (click)="goBack()">Powrót</button>
+
   </div>
-
-
-
-
-  <table>
-    <tr>
-      <th><h1>Dostępność</h1></th>
-      <th style="alignment: center">
-        <form class="formgroup" [formGroup]="form">
-          <div class="onoffswitch">
-
-            <input [checked]="dish?.isAvailable"
-                   type="checkbox"
-                   name="onoffswitch"
-                   class="onoffswitch-checkbox"
-                   id="myonoffswitch"
-                   formControlName="avaliability" (change)="changeAvaliability()">
-            <label class="onoffswitch-label" for="myonoffswitch"></label>
-          </div>
-
-        </form>
-
-      </th>
-    </tr>
-  </table>
-
-  <button style="margin-top: 30px;" class="menu-button" (click)="goBack()">Powrót</button>
-
 </div>
+
+

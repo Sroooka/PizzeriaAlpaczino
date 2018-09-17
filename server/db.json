@@ -287,6 +287,21 @@
       ],
       "price": 35,
       "status": "Wysłano"
+    },
+    {
+      "id": 4,
+      "name": "Jan",
+      "surname": "Nowak",
+      "address": "Przykladowa 1",
+      "city": "Sroda",
+      "postalCode": "63-999",
+      "telephone": "555-555-555",
+      "dishIds": [
+        1,
+        2
+      ],
+      "price": 35,
+      "status": "Dostarczono"
     }
   ],
   "Users": [

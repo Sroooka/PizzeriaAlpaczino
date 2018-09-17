@@ -1,3 +1,7 @@
+.container{
+  margin: 20px;
+  background-color: #540076;
+}
 
 .menu-button {
   margin-top: 10px;
@@ -23,7 +27,7 @@
 
 h1, h2, h3{
   display: block;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   vertical-align: middle;
   display: inline-block;
@@ -32,7 +36,7 @@ h1, h2, h3{
   padding: 1vh;
   font-weight: lighter;
   letter-spacing: 2px;
-  text-shadow: 1px 1px 10px #ffffff;
+  text-shadow: 1px 1px 10px #ffc1e0;
 
   h1{
     font-size: 6vh;

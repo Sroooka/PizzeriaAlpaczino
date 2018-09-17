@@ -1,5 +1,6 @@
 <div class="container" *ngFor="let m of menuEntries">
   <ul routerLinkActive="active">
+    <li class="left-container"><h2>ID: {{m.id}}</h2></li>
     <li class="left-container"><a class="dishcontainer" routerLink="/admindetail/{{m.id}}">{{m.name}}</a></li>
 
   </ul>
