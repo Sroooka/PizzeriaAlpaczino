@@ -10,13 +10,14 @@ import { MenuDetailComponent } from './menu-detail/menu-detail.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import {NgModel, ReactiveFormsModule} from '@angular/forms';
 import { OrderDoneComponent } from './order-done/order-done.component';
 import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login.guard';
 import { OrdersComponent } from './orders/orders.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { MenuSettingsComponent } from './menu-settings/menu-settings.component';
+import { MenuSettingsDetailsComponent } from './menu-settings-details/menu-settings-details.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MenuSettingsComponent } from './menu-settings/menu-settings.component';
     LoginComponent,
     OrdersComponent,
     OrderDetailsComponent,
-    MenuSettingsComponent
+    MenuSettingsComponent,
+    MenuSettingsDetailsComponent
   ],
   imports: [
     HttpClientModule,
@@ -40,7 +42,7 @@ import { MenuSettingsComponent } from './menu-settings/menu-settings.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [NgModel],
 
   bootstrap: [AppComponent]
 })

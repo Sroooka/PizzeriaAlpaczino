@@ -10,11 +10,13 @@ import {OrdersComponent} from './orders/orders.component';
 import {LoginGuard} from './login.guard';
 import {OrderDetailsComponent} from './order-details/order-details.component';
 import {MenuSettingsComponent} from './menu-settings/menu-settings.component';
+import {MenuSettingsDetailsComponent} from './menu-settings-details/menu-settings-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'menuEntries', component: MenuComponent },
-  { path: 'menuSettings', component: MenuSettingsComponent },
+  { path: 'menuSettings', component: MenuSettingsComponent, canActivate: [LoginGuard] },
+  { path: 'admindetail/:id', component: MenuSettingsDetailsComponent, canActivate: [LoginGuard] },
   { path: 'order', component: OrderComponent },
   { path: 'detail/:id', component: MenuDetailComponent },
   { path: 'order-detail/:id', component: OrderDetailsComponent, canActivate: [LoginGuard] },

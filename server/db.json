@@ -19,7 +19,7 @@
     {
       "id": 3,
       "name": "Pizza Vesuvio",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos, ser, szynka",
       "type": "pizza",
       "price": "18"
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "name": "Pizza Funghi",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos, ser, pieczarki",
       "type": "pizza",
       "price": "18"
@@ -35,7 +35,7 @@
     {
       "id": 5,
       "name": "Pizza Campagnola",
-      "isAvailable": true,
+      "isAvailable": false,
       "description": "Sos, ser, salami, cebula",
       "type": "pizza",
       "price": "18.5"
@@ -259,185 +259,34 @@
       "id": 1
     },
     {
-      "name": "Jan",
-      "surname": "Kowalski",
-      "address": "",
-      "city": "",
-      "postalCode": "",
-      "telephone": "",
+      "id": 2,
+      "name": "asdasdasd",
+      "surname": "sadad",
+      "address": "adasdas",
+      "city": "dasdasd",
+      "postalCode": "asdsadas",
+      "telephone": "dsadasdasd",
       "dishIds": [
         1,
         2
       ],
       "price": 35,
-      "status": "Dostarczono",
-      "id": 2
-    },
-    {
-      "name": "asd",
-      "surname": "asda",
-      "address": "sdas",
-      "city": "dasd",
-      "postalCode": "asda",
-      "telephone": "sd",
-      "dishIds": [
-        1,
-        2,
-        3
-      ],
-      "price": 53,
-      "status": "Dostarczono",
-      "id": 3
-    },
-    {
-      "name": "ababa",
-      "surname": "babab",
-      "address": "aba",
-      "city": "bababa",
-      "postalCode": "bababa",
-      "telephone": "bababab",
-      "dishIds": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3
-      ],
-      "price": 260,
-      "status": "Wysłano",
-      "id": 4
-    },
-    {
-      "id": 5,
-      "name": "fdg",
-      "surname": "dsgsgfd",
-      "address": "dsfdsfg",
-      "city": "gsdsgdf",
-      "postalCode": "fgfgds",
-      "telephone": "dgdss",
-      "dishIds": [
-        21,
-        22,
-        23
-      ],
-      "price": 15,
       "status": "Przyjęto do realizacji"
     },
     {
-      "id": 6,
-      "name": "Jan",
-      "surname": "Marian",
-      "address": "ul. Prosta 1",
-      "city": "Sroda WLkp",
+      "id": 3,
+      "name": "Krzysztof",
+      "surname": "Kowalski",
+      "address": "Dluga 1",
+      "city": "Sroda",
       "postalCode": "63-000",
       "telephone": "555-555-555",
       "dishIds": [
         1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        13,
-        14,
-        15
+        2
       ],
-      "price": 273,
-      "status": "W trakcie realizacji"
-    },
-    {
-      "id": 7,
-      "name": "asdf",
-      "surname": "asdf",
-      "address": "af",
-      "city": "asdf",
-      "postalCode": "asfas",
-      "telephone": "df",
-      "dishIds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        13,
-        14,
-        15,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        2,
-        2,
-        2,
-        3,
-        3,
-        3,
-        21,
-        21,
-        21
-      ],
-      "price": 225,
-      "status": "Dostarczono"
-    },
-    {
-      "id": 8,
-      "name": "adsad",
-      "surname": "asd",
-      "address": "sd",
-      "city": "dasd",
-      "postalCode": "sadas",
-      "telephone": "asd",
-      "dishIds": [
-        21
-      ],
-      "price": 5,
-      "status": "W trakcie realizacji"
-    },
-    {
-      "id": 9,
-      "name": "Krzysztof",
-      "surname": "Jarzyna",
-      "address": "Ze",
-      "city": "Szczecina",
-      "postalCode": "555-555",
-      "telephone": "555-555-555",
-      "dishIds": [
-        1,
-        2,
-        3,
-        10,
-        11,
-        17,
-        18,
-        21,
-        24,
-        30
-      ],
-      "price": 132.5,
-      "status": "Dostarczono"
+      "price": 35,
+      "status": "Wysłano"
     }
   ],
   "Users": [

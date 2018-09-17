@@ -3,6 +3,7 @@ import {MenuEntry} from '../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
 import {MenuService} from '../menu.service';
 import {CartService} from '../cart.service';
+import {OrderStatus} from '../Model/OrderStatus.Enum';
 
 @Component({
   selector: 'app-menu-settings',
@@ -11,17 +12,18 @@ import {CartService} from '../cart.service';
 })
 export class MenuSettingsComponent implements OnInit, OnDestroy {
 
-  menu: MenuEntry[];
+  menuEntries: MenuEntry[];
   sub: Subscription;
 
   constructor(
     readonly menuService: MenuService,
     readonly cartService: CartService,
-  ) { }
+  ) {
+  }
 
   getFullMenu(): void {
     this.sub = this.menuService.getFullMenu()
-      .subscribe(menu => this.menu = menu);
+      .subscribe(menu => this.menuEntries = menu);
   }
 
   ngOnInit() {
@@ -31,4 +33,5 @@ export class MenuSettingsComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
+
 }

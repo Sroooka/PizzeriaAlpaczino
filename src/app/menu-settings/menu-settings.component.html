@@ -1,13 +1,7 @@
-<div class="container" *ngFor="let m of menu">
+<div class="container" *ngFor="let m of menuEntries">
   <ul routerLinkActive="active">
-    <li class="left-container"><a class="dishcontainer" routerLink="/detail/{{m.id}}">{{m.name}}</a></li>
+    <li class="left-container"><a class="dishcontainer" routerLink="/admindetail/{{m.id}}">{{m.name}}</a></li>
 
-    <li class="right-container"><a class="dishcontainer">{{m.price | number: '1.2-2'}}zł</a></li>
-
-  </ul>
-
-  <ul routerLinkActive="active">
-    <li class="left-container"><a class="descriptioncontainer">{{m.description}}</a></li>
   </ul>
   <br>
 </div>

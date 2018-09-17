@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {MenuEntry} from './Model/MenuEntry.Model';
+import {Order} from './Model/Order.Model';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,10 @@ export class MenuService {
   }
 
   getDish(id: number): Observable<MenuEntry> {
-    return this.http.get<MenuEntry>(`/api/Menu/${id}`);
+    return this.http.get<MenuEntry>(`/api/MenuEntry/${id}`);
+  }
+
+  setAvaliability(newDish: MenuEntry) {
+    return this.http.put<MenuEntry>(`/api/MenuEntry/${newDish.id}`, newDish);
   }
 }
