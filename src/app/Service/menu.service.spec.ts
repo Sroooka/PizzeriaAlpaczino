@@ -22,6 +22,17 @@ fdescribe('MenuService', () => {
     price: 32,
   };
 
+  const unavaliablePizza: MenuEntry = {
+    id: 31,
+    name: 'Pizza',
+    isAvailable: false,
+    description: 'Zwykła pizza',
+    type: MenuType.PIZZA,
+    price: 32,
+  };
+
+  const mockMenu: MenuEntry[] = [pizza, pizza, pizza, pizza, pizza, pizza, pizza];
+  const mockUnavaliableMenu: MenuEntry[] = [unavaliablePizza, unavaliablePizza];
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -42,9 +53,8 @@ fdescribe('MenuService', () => {
   });
 
 
-  it('should menu will be equal mocked', fakeAsync(() => {
+  it('should menu will be equal mocked after calling getMenu', fakeAsync(() => {
     let dishes: MenuEntry[] = [];
-    const mockMenu: MenuEntry[] = [pizza, pizza, pizza, pizza, pizza, pizza, pizza];
 
     // when
     service.getMenu().subscribe(x => dishes = x);
@@ -53,6 +63,104 @@ fdescribe('MenuService', () => {
     req.flush(mockMenu);
 
     expect(dishes).toEqual(mockMenu);
+
+    testingController.verify();
+  }));
+
+  it('should menu will be equal mocked after calling getFullMenu', fakeAsync(() => {
+    let dishes: MenuEntry[] = [];
+
+    // when
+    service.getFullMenu().subscribe(x => dishes = x);
+    const req = testingController.expectOne('/api/MenuEntry');
+    expect(req.request.method).toEqual('GET');
+    req.flush(mockMenu);
+
+    expect(dishes).toEqual(mockMenu);
+
+    testingController.verify();
+  }));
+
+  it('should menu will be equal mocked after calling getPizza', fakeAsync(() => {
+    let dishes: MenuEntry[] = [];
+
+    // when
+    service.getPizza().subscribe(x => dishes = x);
+    const req = testingController.expectOne('/api/MenuEntry/?type=pizza');
+    expect(req.request.method).toEqual('GET');
+    req.flush(mockMenu);
+
+    expect(dishes).toEqual(mockMenu);
+
+    testingController.verify();
+  }));
+
+  it('should menu will be equal mocked after calling getPasta', fakeAsync(() => {
+    let dishes: MenuEntry[] = [];
+
+    // when
+    service.getPasta().subscribe(x => dishes = x);
+    const req = testingController.expectOne('/api/MenuEntry/?type=pasta');
+    expect(req.request.method).toEqual('GET');
+    req.flush(mockMenu);
+
+    expect(dishes).toEqual(mockMenu);
+
+    testingController.verify();
+  }));
+
+  it('should menu will be equal mocked after calling getDrink', fakeAsync(() => {
+    let dishes: MenuEntry[] = [];
+
+    // when
+    service.getDrink().subscribe(x => dishes = x);
+    const req = testingController.expectOne('/api/MenuEntry/?type=drink');
+    expect(req.request.method).toEqual('GET');
+    req.flush(mockMenu);
+
+    expect(dishes).toEqual(mockMenu);
+
+    testingController.verify();
+  }));
+
+  it('should return nothing when returning unavaliable dishes', fakeAsync(() => {
+    let dishes: MenuEntry[] = [];
+
+    // when
+    service.getMenu().subscribe(x => dishes = x);
+    const req = testingController.expectOne('/api/MenuEntry');
+    expect(req.request.method).toEqual('GET');
+    req.flush(mockUnavaliableMenu);
+
+    expect(dishes.length).toBe(0);
+
+    testingController.verify();
+  }));
+
+  it('should find element by id', fakeAsync(() => {
+    let dish: MenuEntry = null;
+
+    // when
+    service.getDish(pizza.id).subscribe(x => dish = x);
+    const req = testingController.expectOne('/api/MenuEntry/' + pizza.id);
+    expect(req.request.method).toEqual('GET');
+    req.flush(pizza);
+
+    expect(dish).toEqual(pizza);
+
+    testingController.verify();
+  }));
+
+  it('should set status', fakeAsync(() => {
+    let dish: MenuEntry = null;
+
+    // when
+    service.setAvaliability(pizza).subscribe(x => dish = x);
+    const req = testingController.expectOne('/api/MenuEntry/' + pizza.id);
+    expect(req.request.method).toEqual('PUT');
+    req.flush(pizza);
+
+    expect(dish).toEqual(pizza);
 
     testingController.verify();
   }));

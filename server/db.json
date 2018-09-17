@@ -371,6 +371,32 @@
       ],
       "price": 30,
       "status": "Anulowano"
+    },
+    {
+      "id": 8,
+      "name": "dsaf",
+      "surname": "sdfsad",
+      "address": "fdsafsadf",
+      "city": "fasd",
+      "postalCode": "saddsaf",
+      "telephone": "fsadfas",
+      "dishIds": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        6,
+        8,
+        16,
+        17,
+        18,
+        21
+      ],
+      "price": 202,
+      "status": "Dostarczono"
     }
   ],
   "Users": [
