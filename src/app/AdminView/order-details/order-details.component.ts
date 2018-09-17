@@ -1,12 +1,12 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {MenuService} from '../menu.service';
+import {MenuService} from '../../Service/menu.service';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
-import {Order} from '../Model/Order.Model';
-import {MenuEntry} from '../Model/MenuEntry.Model';
+import {Order} from '../../Model/Order.Model';
+import {MenuEntry} from '../../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
-import {OrderService} from '../order.service';
-import {OrderStatus} from '../Model/OrderStatus.Enum';
+import {OrderService} from '../../Service/order.service';
+import {OrderStatus} from '../../Model/OrderStatus.Enum';
 
 @Component({
   selector: 'app-order-details',

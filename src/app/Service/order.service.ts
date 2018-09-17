@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
-import {MenuEntry} from './Model/MenuEntry.Model';
+import {MenuEntry} from '../Model/MenuEntry.Model';
 import {FormGroup} from '@angular/forms';
-import {Order} from './Model/Order.Model';
+import {Order} from '../Model/Order.Model';
 import {CartService} from './cart.service';
 import {map} from 'rxjs/operators';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, Subscription} from 'rxjs';
 import {RequestOptions} from '@angular/http';
-import {OrderStatus} from './Model/OrderStatus.Enum';
+import {OrderStatus} from '../Model/OrderStatus.Enum';
 import {Router} from '@angular/router';
 
 @Injectable({

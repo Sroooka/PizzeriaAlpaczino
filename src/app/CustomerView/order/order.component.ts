@@ -1,9 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
-import {CartService} from '../cart.service';
-import {OrderService} from '../order.service';
-import {MenuEntry} from '../Model/MenuEntry.Model';
+import {CartService} from '../../Service/cart.service';
+import {OrderService} from '../../Service/order.service';
+import {MenuEntry} from '../../Model/MenuEntry.Model';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 

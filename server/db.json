@@ -323,6 +323,54 @@
       ],
       "price": 90,
       "status": "Przyjęto do realizacji"
+    },
+    {
+      "id": 6,
+      "name": "dsfg",
+      "surname": "dsfgds",
+      "address": "gdsfg",
+      "city": "dsfgsdf",
+      "postalCode": "gdsfg",
+      "telephone": "sdfgsfd",
+      "dishIds": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "price": 272,
+      "status": "Przyjęto do realizacji"
+    },
+    {
+      "id": 7,
+      "name": "afd",
+      "surname": "sadfads",
+      "address": "fasd",
+      "city": "fsad",
+      "postalCode": "fsadf",
+      "telephone": "asdf",
+      "dishIds": [
+        21,
+        21,
+        21,
+        21,
+        22,
+        22
+      ],
+      "price": 30,
+      "status": "Anulowano"
     }
   ],
   "Users": [

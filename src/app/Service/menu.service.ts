@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
-import {MenuEntry} from './Model/MenuEntry.Model';
-import {Order} from './Model/Order.Model';
+import {MenuEntry} from '../Model/MenuEntry.Model';
+import {Order} from '../Model/Order.Model';
 
 @Injectable({
   providedIn: 'root'

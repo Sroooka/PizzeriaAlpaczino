@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {MenuService} from '../menu.service';
-import {OrderService} from '../order.service';
-import {MenuEntry} from '../Model/MenuEntry.Model';
+import {MenuService} from '../../Service/menu.service';
+import {OrderService} from '../../Service/order.service';
+import {MenuEntry} from '../../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
-import {Order} from '../Model/Order.Model';
+import {Order} from '../../Model/Order.Model';
 
 @Component({
   selector: 'app-orders',

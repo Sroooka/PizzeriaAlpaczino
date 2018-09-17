@@ -1,11 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuComponent } from './menu.component';
-import {MenuService} from '../menu.service';
+import {MenuService} from '../../Service/menu.service';
 import {HttpClientModule} from '@angular/common/http';
 import {CartComponent} from '../cart/cart.component';
-import {CartService} from '../cart.service';
-import {OrderService} from '../order.service';
+import {CartService} from '../../Service/cart.service';
+import {OrderService} from '../../Service/order.service';
 import {of} from 'rxjs';
 import {RouterTestingModule} from '@angular/router/testing';
 import {subscribeTo} from 'rxjs/internal-compatibility';

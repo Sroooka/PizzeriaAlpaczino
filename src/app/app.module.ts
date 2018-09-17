@@ -5,19 +5,19 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { MenuComponent } from './menu/menu.component';
-import { MenuDetailComponent } from './menu-detail/menu-detail.component';
-import { HomeComponent } from './home/home.component';
-import { CartComponent } from './cart/cart.component';
-import { OrderComponent } from './order/order.component';
+import { MenuComponent } from './CustomerView/menu/menu.component';
+import { MenuDetailComponent } from './CustomerView/menu-detail/menu-detail.component';
+import { HomeComponent } from './CustomerView/home/home.component';
+import { CartComponent } from './CustomerView/cart/cart.component';
+import { OrderComponent } from './CustomerView/order/order.component';
 import {NgModel, ReactiveFormsModule} from '@angular/forms';
-import { OrderDoneComponent } from './order-done/order-done.component';
-import { LoginComponent } from './login/login.component';
-import { LoginGuard } from './login.guard';
-import { OrdersComponent } from './orders/orders.component';
-import { OrderDetailsComponent } from './order-details/order-details.component';
-import { MenuSettingsComponent } from './menu-settings/menu-settings.component';
-import { MenuSettingsDetailsComponent } from './menu-settings-details/menu-settings-details.component';
+import { OrderDoneComponent } from './CustomerView/order-done/order-done.component';
+import { LoginComponent } from './CustomerView/login/login.component';
+import { LoginGuard } from './Guard/login.guard';
+import { OrdersComponent } from './AdminView/orders/orders.component';
+import { OrderDetailsComponent } from './AdminView/order-details/order-details.component';
+import { MenuSettingsComponent } from './AdminView/menu-settings/menu-settings.component';
+import { MenuSettingsDetailsComponent } from './AdminView/menu-settings-details/menu-settings-details.component';
 
 
 @NgModule({

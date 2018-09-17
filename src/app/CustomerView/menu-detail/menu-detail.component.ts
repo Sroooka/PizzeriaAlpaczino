@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MenuEntry} from '../Model/MenuEntry.Model';
-import {MenuService} from '../menu.service';
+import {MenuEntry} from '../../Model/MenuEntry.Model';
+import {MenuService} from '../../Service/menu.service';
 import { Location } from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
 

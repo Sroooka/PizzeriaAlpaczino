@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {MenuEntry} from './Model/MenuEntry.Model';
+import {MenuEntry} from '../Model/MenuEntry.Model';
 import {OrderService} from './order.service';
 import {Router} from '@angular/router';
 

@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {MenuEntry} from '../Model/MenuEntry.Model';
+import {MenuEntry} from '../../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
-import {MenuService} from '../menu.service';
-import {CartService} from '../cart.service';
+import {MenuService} from '../../Service/menu.service';
+import {CartService} from '../../Service/cart.service';
 
 @Component({
   selector: 'app-menu',

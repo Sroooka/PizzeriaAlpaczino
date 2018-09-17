@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from '@angular/common';
-import {LoginService} from '../login.service';
+import {LoginService} from '../../Service/login.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {User} from '../Model/User.Model';
+import {User} from '../../Model/User.Model';
 import {forEach} from '@angular/router/src/utils/collection';
 
 @Component({

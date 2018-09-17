@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {MenuEntry} from '../Model/MenuEntry.Model';
+import {MenuEntry} from '../../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
-import {MenuService} from '../menu.service';
-import {CartService} from '../cart.service';
-import {OrderStatus} from '../Model/OrderStatus.Enum';
+import {MenuService} from '../../Service/menu.service';
+import {CartService} from '../../Service/cart.service';
+import {OrderStatus} from '../../Model/OrderStatus.Enum';
 
 @Component({
   selector: 'app-menu-settings',
