@@ -13,7 +13,6 @@ import { OrderComponent } from './CustomerView/order/order.component';
 import {NgModel, ReactiveFormsModule} from '@angular/forms';
 import { OrderDoneComponent } from './CustomerView/order-done/order-done.component';
 import { LoginComponent } from './CustomerView/login/login.component';
-import { LoginGuard } from './Guard/login.guard';
 import { OrdersComponent } from './AdminView/orders/orders.component';
 import { OrderDetailsComponent } from './AdminView/order-details/order-details.component';
 import { MenuSettingsComponent } from './AdminView/menu-settings/menu-settings.component';

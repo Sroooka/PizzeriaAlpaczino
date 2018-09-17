@@ -1,12 +1,14 @@
 <nav class="main-navbar">
   <div class="container">
     <ul routerLinkActive="active">
-
       <img class="navi-icon" src="./assets/logo.png" routerLink="home">
       <li class="left-container"><a class="navi-link" routerLink="home">{{title}}</a></li>
       <li class="left-container"><a class="navi-link" routerLink="menuEntries">Lista Dań</a></li>
-      <li *ngIf="loginService.isLogged() == true" class="left-container"><a class="navi-link" routerLink="orders">Zamówienia</a></li>
-      <li *ngIf="loginService.isLogged() == true" class="left-container"><a class="navi-link" routerLink="menuSettings">Ustawienia karty dań</a></li>
+      <li *ngIf="loginService.isLogged() == true" class="left-container">
+        <a class="navi-link" routerLink="orders">Zamówienia</a>
+      </li>
+      <li *ngIf="loginService.isLogged() == true" class="left-container">
+        <a class="navi-link" routerLink="menuSettings">Ustawienia karty dań</a></li>
       <li *ngIf="loginService.isLogged() == false" class="right-container">
         <img id="loginIcon" src="./assets/login.png" routerLink="login">
       </li>
@@ -20,7 +22,6 @@
   </div>
 </nav>
 
-
 <div class="row">
   <div class="column" id="leftColumn">
     <app-cart></app-cart>
@@ -29,8 +30,3 @@
     <router-outlet></router-outlet>
   </div>
 </div>
-
-
-
-
-

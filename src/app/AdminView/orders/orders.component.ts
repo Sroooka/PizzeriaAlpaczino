@@ -42,17 +42,4 @@ export class OrdersComponent implements OnInit, OnDestroy {
     this.subMenu = this.menuService.getFullMenu()
       .subscribe(menu => this.menuEntries = menu);
   }
-
-  getProductListByOrderId(id: number) {
-    this.simpleOrderMenu = [];
-    if (this.menuEntries) {
-      const order = this.orders.find(i => i.id === id);
-      for (let i = 0; i < order.dishIds.length; i++) {
-        this.simpleOrderMenu.push(
-          this.menuEntries.find(x => x.id === order.dishIds[i])
-        );
-      }
-    }
-    return this.simpleOrderMenu;
-  }
 }

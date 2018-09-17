@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MenuEntry} from '../../Model/MenuEntry.Model';
 import {CartService} from '../../Service/cart.service';
 
@@ -11,7 +11,8 @@ export class CartComponent implements OnInit {
 
   constructor(
     readonly cartService: CartService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
   }

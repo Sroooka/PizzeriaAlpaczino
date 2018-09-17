@@ -32,14 +32,13 @@
 </form>
 
 <div style="margin-top: 20px; margin-left: 20px;">
-  <h2>Kwota zamówienia: </h2><h1>{{orderService.getTotal() | number: '1.2-2'}} zł</h1>
+  <h2>Kwota zamówienia: </h2>
+  <h1>{{orderService.getTotal() | number: '1.2-2'}} zł</h1>
   <div>
     <h2>Lista zakupów:</h2>
     <div *ngFor="let dish of orderService.getCart()" style="margin-left: 10px;">
       <h3>{{dish.name}} {{dish.price | number: '1.2-2'}}zł</h3>
     </div>
   </div>
-
-
 </div>
 

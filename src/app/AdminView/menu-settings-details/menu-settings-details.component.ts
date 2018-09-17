@@ -23,7 +23,7 @@ export class MenuSettingsDetailsComponent implements OnInit {
     private menuService: MenuService,
     private route: ActivatedRoute,
     private location: Location,
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.getDish();
@@ -43,6 +43,4 @@ export class MenuSettingsDetailsComponent implements OnInit {
     this.dish.isAvailable = this.form.get('avaliability').value;
     this.subAvaliability = this.menuService.setAvaliability(this.dish).subscribe();
   }
-
-
 }

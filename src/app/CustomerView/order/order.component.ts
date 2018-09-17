@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {CartService} from '../../Service/cart.service';
 import {OrderService} from '../../Service/order.service';
@@ -31,10 +31,10 @@ export class OrderComponent implements OnInit {
     private cartService: CartService,
     private route: ActivatedRoute,
     private location: Location,
-  ) { }
+  ) {
+  }
 
   onFormSubmit(): void {
-    console.log(this.orderForm.get('name').value);
     this.orderService.generateNewOrder(this.orderForm);
     this.cartService.clearCart();
   }

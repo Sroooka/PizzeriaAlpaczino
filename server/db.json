@@ -397,6 +397,42 @@
       ],
       "price": 202,
       "status": "Dostarczono"
+    },
+    {
+      "id": 9,
+      "name": "asdas",
+      "surname": "dasd",
+      "address": "asdasd",
+      "city": "asdas",
+      "postalCode": "dasdasdas",
+      "telephone": "dasdasdsa",
+      "dishIds": [
+        1,
+        2,
+        15,
+        16,
+        17,
+        18,
+        22,
+        27,
+        30
+      ],
+      "price": 106.5,
+      "status": "Przyjęto do realizacji"
+    },
+    {
+      "id": 10,
+      "name": "asd",
+      "surname": "asdas",
+      "address": "d",
+      "city": "asdas",
+      "postalCode": "dasd",
+      "telephone": "asd",
+      "dishIds": [
+        1
+      ],
+      "price": 17,
+      "status": "Anulowano"
     }
   ],
   "Users": [

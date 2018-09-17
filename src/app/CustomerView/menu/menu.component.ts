@@ -17,7 +17,8 @@ export class MenuComponent implements OnInit, OnDestroy {
   constructor(
     readonly menuService: MenuService,
     readonly cartService: CartService,
-  ) { }
+  ) {
+  }
 
   getMenu(): void {
     this.sub = this.menuService.getMenu()

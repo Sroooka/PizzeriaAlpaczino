@@ -2,11 +2,8 @@ import {Injectable} from '@angular/core';
 import {MenuEntry} from '../Model/MenuEntry.Model';
 import {FormGroup} from '@angular/forms';
 import {Order} from '../Model/Order.Model';
-import {CartService} from './cart.service';
-import {map} from 'rxjs/operators';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {Observable, Subscription} from 'rxjs';
-import {RequestOptions} from '@angular/http';
 import {OrderStatus} from '../Model/OrderStatus.Enum';
 import {Router} from '@angular/router';
 
@@ -18,7 +15,6 @@ export class OrderService {
   total = 0;
   order: Order;
   orders: Order[] = [];
-  sub: Subscription;
   dishIds = [];
 
   setCart(newCart: MenuEntry[]) {
@@ -40,17 +36,12 @@ export class OrderService {
   constructor(
     readonly http: HttpClient,
     readonly router: Router,
-  ) {  }
+  ) {
+  }
 
   generateNewOrder(orderForm: FormGroup) {
-    //this.sub = this.http.get<Order[]>('/api/Orders')
-    //  .subscribe(list => this.orders = list);
-
-    //console.log('Orders length: ' + this.orders.length);
-
     this.cart.forEach((item) => {
       this.dishIds.push(item.id);
-      console.log('Added Dish Id: ' + item.id);
     });
 
     this.order = {
@@ -67,11 +58,6 @@ export class OrderService {
     };
 
     this.postOrder(this.order).subscribe();
-
-    console.log('Added new Order!');
-    console.log('Customer: ' + this.order.name + ' ' + this.order.surname);
-    console.log('Price: ' + this.order.price);
-
     this.router.navigate(['/orderdone']);
   }
 

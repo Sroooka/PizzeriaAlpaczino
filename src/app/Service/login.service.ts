@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {User} from '../Model/User.Model';
 import {Router} from '@angular/router';
@@ -26,7 +26,6 @@ export class LoginService {
   login(user: User) {
     this.isLoggedIn = true;
     this.userName = user.login;
-    console.log('Logged in!');
     this.router.navigate(['/orders']);
 
   }
@@ -34,7 +33,6 @@ export class LoginService {
   logout() {
     this.isLoggedIn = false;
     this.router.navigate(['/menuEntries']);
-    console.log('Logged out!');
   }
 
   isLogged() {

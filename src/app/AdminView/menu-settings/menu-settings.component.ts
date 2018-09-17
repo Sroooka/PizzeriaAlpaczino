@@ -3,7 +3,6 @@ import {MenuEntry} from '../../Model/MenuEntry.Model';
 import {Subscription} from 'rxjs';
 import {MenuService} from '../../Service/menu.service';
 import {CartService} from '../../Service/cart.service';
-import {OrderStatus} from '../../Model/OrderStatus.Enum';
 
 @Component({
   selector: 'app-menu-settings',
@@ -33,5 +32,4 @@ export class MenuSettingsComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
-
 }

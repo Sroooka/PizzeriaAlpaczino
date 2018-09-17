@@ -1,19 +1,12 @@
-
 <div style="margin-top: 15px; margin-left: 5px;">
   <h1>Koszyk:</h1>
-
   <div *ngFor="let dish of cartService.getCart()">
     <button class="minus-button" (click)="cartService.removeFromCart(dish)">-</button>
     <h3>{{dish.name}} {{dish.price | number: '1.2-2'}}zł</h3>
-
   </div>
-
-
-
   <div *ngIf="cartService.getTotal() > 0">
     <h2>Suma: {{cartService.getTotal() | number: '1.2-2'}} zł</h2>
   </div>
-
   <button *ngIf="cartService.getTotal() > 0" class="menu-button" (click)="cartService.proceed()">Zamówienie</button>
 </div>
 

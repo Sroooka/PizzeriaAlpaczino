@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {MenuEntry} from '../Model/MenuEntry.Model';
 import {OrderService} from './order.service';
 import {Router} from '@angular/router';
@@ -27,7 +27,7 @@ export class CartService {
   }
 
   removeFromCart(dish: MenuEntry) {
-    for (let i = 0; i < this.cart.length; i++){
+    for (let i = 0; i < this.cart.length; i++) {
       if (this.cart[i] === dish) {
         this.cart.splice(i, 1);
         this.total = this.total - parseFloat(String(dish.price));

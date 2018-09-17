@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {Observable, timer} from 'rxjs';
-import {map, take} from 'rxjs/operators';
 
 @Component({
   selector: 'app-order-done',
@@ -12,11 +10,9 @@ export class OrderDoneComponent implements OnInit {
 
   constructor(
     readonly router: Router,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
   }
-
-
-
 }

@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MenuEntry} from '../../Model/MenuEntry.Model';
 import {MenuService} from '../../Service/menu.service';
-import { Location } from '@angular/common';
+import {Location} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -17,7 +17,8 @@ export class MenuDetailComponent implements OnInit {
     private menuService: MenuService,
     private route: ActivatedRoute,
     private location: Location,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.getDish();
@@ -32,5 +33,4 @@ export class MenuDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
 }

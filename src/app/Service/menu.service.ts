@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {MenuEntry} from '../Model/MenuEntry.Model';
-import {Order} from '../Model/Order.Model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,8 @@ export class MenuService {
 
   constructor(
     readonly http: HttpClient,
-  ) {}
+  ) {
+  }
 
   getMenu(): Observable<MenuEntry[]> {
     return this.http.get<MenuEntry[]>('/api/MenuEntry')
