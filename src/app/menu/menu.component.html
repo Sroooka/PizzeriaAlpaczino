@@ -8,9 +8,7 @@
   <div class="container" *ngFor="let m of menu">
     <ul routerLinkActive="active" >
       <li class="left-container"><a class="dishcontainer" routerLink="/detail/{{m.id}}">{{m.name}}</a></li>
-
       <li class="right-container"><a class="dishcontainer">{{m.price | number: '1.2-2'}}zł</a></li>
-
       <li class="right-container"><button class="plus-button" (click)="addToCart(m)">+</button></li>
     </ul>
 
