@@ -8,11 +8,13 @@
 
   </div>
 
-  <div>
+
+
+  <div *ngIf="cartService.getTotal() > 0">
     <h2>Suma: {{cartService.getTotal() | number: '1.2-2'}} zł</h2>
   </div>
 
-  <button class="menu-button" (click)="cartService.proceed()">Zamówienie</button>
+  <button *ngIf="cartService.getTotal() > 0" class="menu-button" (click)="cartService.proceed()">Zamówienie</button>
 </div>
 
 
