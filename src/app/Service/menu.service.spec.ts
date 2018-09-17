@@ -5,10 +5,9 @@ import {HttpClientTestingModule, HttpTestingController} from '@angular/common/ht
 import {RouterTestingModule} from '@angular/router/testing';
 import {MenuEntry} from '../Model/MenuEntry.Model';
 import {MenuType} from '../Model/MenuType.Enum';
-import {Observable, of} from 'rxjs';
 
 
-fdescribe('MenuService', () => {
+describe('MenuService', () => {
   let service: MenuService;
   let testingController: HttpTestingController;
   const URL = 'http://localhost:3000/MenuEntry';

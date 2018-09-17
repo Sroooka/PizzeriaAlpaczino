@@ -8,9 +8,8 @@ import {CartService} from '../../Service/cart.service';
 import {OrderService} from '../../Service/order.service';
 import {of} from 'rxjs';
 import {RouterTestingModule} from '@angular/router/testing';
-import {subscribeTo} from 'rxjs/internal-compatibility';
 
-fdescribe('MenuComponent', () => {
+describe('MenuComponent', () => {
   let getMenuSpy;
   let getPizzaSpy;
   let getPastaSpy;
