@@ -302,6 +302,27 @@
       ],
       "price": 35,
       "status": "Dostarczono"
+    },
+    {
+      "id": 5,
+      "name": "asd",
+      "surname": "asda",
+      "address": "sdas",
+      "city": "dasd",
+      "postalCode": "asda",
+      "telephone": "sdad",
+      "dishIds": [
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        22
+      ],
+      "price": 90,
+      "status": "Przyjęto do realizacji"
     }
   ],
   "Users": [
