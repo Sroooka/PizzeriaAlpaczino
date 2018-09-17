@@ -8,12 +8,14 @@ import {CartService} from '../cart.service';
 import {OrderService} from '../order.service';
 import {of} from 'rxjs';
 import {RouterTestingModule} from '@angular/router/testing';
+import {subscribeTo} from 'rxjs/internal-compatibility';
 
 fdescribe('MenuComponent', () => {
   let getMenuSpy;
   let getPizzaSpy;
   let getPastaSpy;
   let getDrinkSpy;
+  let getAddToCartSpy;
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
 
@@ -41,10 +43,12 @@ fdescribe('MenuComponent', () => {
     fixture.detectChanges();
 
     const menuService = TestBed.get(MenuService);
+    const cartService = TestBed.get(CartService);
     getMenuSpy = spyOn(menuService, 'getMenu').and.returnValue(of([]));
     getPizzaSpy = spyOn(menuService, 'getPizza').and.returnValue(of([]));
     getPastaSpy = spyOn(menuService, 'getPasta').and.returnValue(of([]));
     getDrinkSpy = spyOn(menuService, 'getDrink').and.returnValue(of([]));
+    getAddToCartSpy = spyOn(cartService, 'addToCart');
   });
 
   afterEach(() => {
@@ -90,5 +94,12 @@ fdescribe('MenuComponent', () => {
     component.getDrink();
 
     expect(getDrinkSpy).toHaveBeenCalled();
+  });
+
+  it('should call cart service when call addToCart', () => {
+
+    component.addToCart(null);
+
+    expect(getAddToCartSpy).toHaveBeenCalled();
   });
 });
